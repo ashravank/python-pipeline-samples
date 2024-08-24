@@ -23,6 +23,9 @@ pipeline:
                   identifier: runlinter
                   name: run linter
                   spec:
+                    connectorRef: <+input>
+                    image: <+input>
+                    shell: Sh
                     command: |-
                       pip install flake8
                       flake8 .
@@ -51,9 +54,9 @@ pipeline:
                   timeout: ""
                   type: BuildAndPushDockerRegistry
           platform:
-            arch: Amd64
             os: Linux
+            arch: Amd64
           runtime:
-            spec: {}
             type: Cloud
+            spec: {}
         type: CI
