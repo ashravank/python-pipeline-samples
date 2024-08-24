@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_ashravank_python_pipeline_samples_1724460499289-pr-trigger-input-set
+  identifier: Build_ashravank_python_pipeline_samples_1724460499289prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_ashravank_python_pipeline_samples_1724460499289
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
