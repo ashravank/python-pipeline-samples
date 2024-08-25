@@ -13,4 +13,3 @@ setup(
         'Werkzeug==2.2.2',
     ],
 )
-
