@@ -49,7 +49,7 @@ pipeline:
                     connectorRef: <+input>
                     repo: shravankumara/python-pipeline
                     tags:
-                      - Demo1
+                      - demo1
                     caching: true
                   timeout: ""
                   type: BuildAndPushDockerRegistry
