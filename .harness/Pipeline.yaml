@@ -3,7 +3,8 @@
   name: My-Python-Pipeline
   identifier: my_pipeline
   projectIdentifier: my_project
-  orgIdentifier: my_orgtags: {}
+  orgIdentifier: my_org
+  tags: {}
   properties:
     ci:
       codebase:
