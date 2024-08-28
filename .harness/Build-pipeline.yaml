@@ -1,8 +1,8 @@
 pipeline:
-  name: Python CI Pipeline
-  identifier: python_ci_pipeline
-  projectIdentifier: my_project
-  orgIdentifier: my_org
+  name: Build-pipeline
+  identifier: Build-pipeline
+  projectIdentifier: Default
+  orgIdentifier: Default
   tags: {}
   stages:
     - stage:
