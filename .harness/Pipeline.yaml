@@ -1,4 +1,8 @@
-  tags: {}
+pipeline:
+  name: Build python-pipeline-samples
+  identifier: my_pipeline
+  projectIdentifier: my_project
+  orgIdentifier: my_org  tags: {}
   properties:
     ci:
       codebase:
