@@ -1,0 +1,41 @@
+pipeline:
+  name: Python CI Pipeline
+  identifier: python_ci_pipeline
+  projectIdentifier: my_project
+  orgIdentifier: my_org
+  tags: {}
+  stages:
+    - stage:
+        name: Build and Test
+        identifier: Build_Test
+        description: "Stage to build, lint, test, and package the Python application"
+        type: CI
+        spec:
+          cloneCodebase: true
+          infrastructure:
+            type: KubernetesHosted
+            spec:
+              identifier: k8s_hosted_infra
+          execution:
+            steps:
+              - step:
+                  type: Run
+                  name: Install Dependencies
+                  identifier: Install_Dependencies
+                  spec:
+                    connectorRef: my_docker_connector
+                    image: python:3.10.6-alpine
+                    shell: Sh
+                    command: |
+                      python3 -m venv .venv
+                      . .venv/bin/activate
+                      pip install -r requirements.txt
+
+              - step:
+                  type: Run
+                  name: Lint Code
+                  identifier: Lint_Code
+                  spec:
+                    connectorRef: my_docker_connector
+                    image: python:3.10.6-alpine
+                   
