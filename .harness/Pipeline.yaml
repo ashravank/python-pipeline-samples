@@ -1,4 +1,9 @@
-  tags: {}
+
+  pipeline:
+  name: My-Python-Pipeline
+  identifier: my_pipeline
+  projectIdentifier: my_project
+  orgIdentifier: my_orgtags: {}
   properties:
     ci:
       codebase:
